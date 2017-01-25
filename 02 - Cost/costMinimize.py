@@ -1,5 +1,7 @@
 import tensorflow as tf
 
+# test
+
 # data set
 x_data = [1., 2., 3., 4.]
 y_data = [1., 3., 5., 7.]
