@@ -4,8 +4,8 @@ x_data = [1., 2., 3.]
 y_data = [1., 2., 3.]
 
 # try to find values for w and b that compute y_data = W * x_data + b
-w = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
 b = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
+w = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
 
 ###############################
 # tf.random_uniform(shape, minval=0, maxval=None, dtype=tf.float32, seed=None, name=None)

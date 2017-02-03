@@ -25,16 +25,16 @@ init = tf.global_variables_initializer()
 with tf.Session() as sess:
     sess.run(init)
 
-    for step in xrange(2001):
+    for step in range(2001):
         sess.run(optimizer, feed_dict={X: x_data, Y: y_data})
         if step % 200 == 0:
-            print step, sess.run(cost, feed_dict={X: x_data, Y: y_data}), sess.run(W)
+            print( step, sess.run(cost, feed_dict={X: x_data, Y: y_data}), sess.run(W) )
 
     a = sess.run(hypothesis, feed_dict={X: [[1, 11, 7]]})
-    print "a :", a, sess.run(tf.arg_max(a, 1))
+    print( "a :", a, sess.run(tf.arg_max(a, 1)) )
 
     b = sess.run(hypothesis, feed_dict={X: [[1, 3, 4]]})
-    print "b :", b, sess.run(tf.arg_max(b, 1))
+    print( "b :", b, sess.run(tf.arg_max(b, 1)) )
 
     c = sess.run(hypothesis, feed_dict={X: [[1, 1, 0]]})
-    print "c :", c, sess.run(tf.arg_max(c, 1))
+    print( "c :", c, sess.run(tf.arg_max(c, 1)) )
